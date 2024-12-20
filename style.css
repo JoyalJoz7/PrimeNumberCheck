@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    animation: blink 2s infinite ease-in-out;
+    margin: 0;
+    padding: 0;
+    position:relative;
+}
+
+body::before{
+    content:'';
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:url(pexels-black-ice-551383-1314529.jpg);
+    background-size:cover;
+    opacity:0.3;
+    z-index: -1;
+}
+
+.prime-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height:350px;
+    width:350px;
+    box-shadow:0px 0px 20px 20px rgba(0, 0, 0, 0.192);
+    border-radius:10px;
+}
+
+.prime-container:hover{
+    transform:scale(1.1);
+    transition:1s ease-in-out;
+    border-radius:15px;
+}
+
+.prime-container:hover input{
+    transform:scale(1.1);
+    transition:1s ease-in-out;
+}
+
+label{
+    font-size:17px;
+    color:white;
+    font-weight:400;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+input{
+    margin-top:10px;
+    padding:10px;
+    width:150px;
+    background:none;
+    border:none;
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.2);
+    color:#fff;
+    font-size:20px;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+input::placeholder{
+    color:#ffffff;
+}
+input:focus{
+    outline:none;
+    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.653);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin:0;
+}
+
+.check-btn{
+    background:none;
+    border:none;
+    margin-top:15px;
+    box-shadow:0px 0px 10px 5px rgba(238, 255, 0, 0.627);
+    font-size:15px;
+    color:#fff;
+    padding:5px 10px;
+}
+
+.check-btn:active{
+    transform:scale(0.90);
+    box-shadow:0px 0px 10px 8px rgba(0, 0, 0, 0.374);
+}
+
+.result{
+    margin-top:30px;
+    color:yellow;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@keyframes blink {
+    0% {
+        background: radial-gradient(circle, rgba(255, 0, 0, 1) 0%, rgba(255, 69, 0, 1) 50%, rgba(139, 0, 0, 1)100%);
+    }
+
+    50% {
+        background: radial-gradient(circle, rgb(15, 183, 9) 0%, rgb(8, 240, 55) 50%, rgb(9, 127, 44)100%);
+    }
+
+    100% {
+        background: radial-gradient(circle, rgba(255, 0, 0, 1) 0%, rgba(255, 69, 0, 1) 50%, rgba(139, 0, 0, 1)100%);
+    }
+}
+
