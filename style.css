@@ -36,7 +36,7 @@ body::before{
     height:350px;
     width:350px;
     box-shadow:0px 0px 20px 20px rgba(0, 0, 0, 0.192);
-    border-radius:10px;
+    border-radius:15px;
     position: relative;
 }
 .prime-container::before{
