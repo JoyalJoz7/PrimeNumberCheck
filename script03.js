@@ -26,7 +26,6 @@ check_btn.addEventListener('click',() => {
     }
 })
 
-
 function checkPrime(num){
     if(num > 1){
         if(num === 2){
@@ -34,7 +33,7 @@ function checkPrime(num){
         }else{
             for(i=2; i<num-1; i++){
                 if(num % i === 0){
-                    return 'NOT PRIME'
+                    return 'NOT A PRIME'
                     break;
                 }
             }
